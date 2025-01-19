@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overall Gamer Rank</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Overall Gamer Rank</h1>
+        <div id="rank-display">
+            <p>Your overall rank is: <span id="overall-rank"></span></p>
+        </div>
+        <button onclick="window.location.href='input-ranks.html'">Back to Input Ranks</button>
+    </div>
+    <script src="../js/app.js"></script>
+    <script src="../js/utils.js"></script>
+    <script>
+        // Assuming the overall rank is calculated and stored in local storage
+        const overallRank = localStorage.getItem('overallRank') || 'Not calculated yet';
+        document.getElementById('overall-rank').textContent = overallRank;
+    </script>
+</body>
+</html>
